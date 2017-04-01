@@ -1,0 +1,26 @@
+
+
+{% load static %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   PersondID<input type="text" name="personid" >
+   <br>
+       <input type="file" name="myfile">
+   
+   <br>
+   
+   <br>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  {% if status %}
+    <p>Status: <a href="{{ status }}">{{ status }}</a>
+
+
+    </p>
+  {% endif %}
+
+{% endblock %}
